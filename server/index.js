@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const OpenAI = require("openai");
 require("dotenv").config();
 
@@ -7,6 +8,7 @@ let PORT = 5500 || process.env.PORT;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 
 const openai = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
