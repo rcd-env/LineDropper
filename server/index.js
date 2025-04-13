@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
-const path = require("path");
-const dotenv = require("dotenv");
 const OpenAI = require("openai");
-dotenv.config();
+require("dotenv").config();
+
 let PORT = 5500 || process.env.PORT;
 
 app.use(express.urlencoded({ extended: true }));
