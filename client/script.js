@@ -17,7 +17,7 @@ btn.addEventListener("click", async () => {
 });
 
 async function getData(topic, platform, tone, length) {
-  let response = await axios.post("http://localhost:5500/generate", {
+  let response = await axios.post("https://linedropper.onrender.com/generate", {
     topic,
     platform,
     tone,
