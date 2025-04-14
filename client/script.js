@@ -8,6 +8,7 @@ btn.addEventListener("click", async () => {
   let length = document.querySelector("#length").value;
   if (!topic) {
     warning.style.display = "block";
+    document.querySelector(".content").style.display = "none";
     return;
   } else {
     warning.style.display = "none";
