@@ -3,9 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Line Dropper</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="manifest"
+      href="../assets/favicon/web-app-manifest-192x192.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Line Dropper</h1>
+    <div class="page">
+      <h1>
+        Line Dropper
+        <span><img src="../assets/Logo.png" alt="" /></span>
+      </h1>
+      <div class="main">
+        <label for="topic">💡 Topic</label>
+        <input type="text" id="topic" placeholder="eg. Football" />
+        <div class="row">
+          <div>
+            <label for="platform">🌐 Platform</label>
+            <select id="platform">
+              <option value="YouTube">YouTube</option>
+              <option value="Instagram">Instagram</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="X">X</option>
+              <option value="Reddit">Reddit</option>
+              <option value="Facebook">Facebook</option>
+            </select>
+          </div>
+          <div>
+            <label for="tone">🎭 Tone</label>
+            <select id="tone">
+              <option value="neutral">Neutral</option>
+              <option value="sarcastic">Sarcastic</option>
+              <option value="emotional">Emotional</option>
+              <option value="professional">Professional</option>
+              <option value="aesthetic">Aesthetic</option>
+              <option value="casual">Casual</option>
+              <option value="informative">Informative</option>
+              <option value="motivational">Motivational</option>
+              <option value="creepy">Creepy</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="length">📃 Content Length</label>
+        <select id="length">
+          <option value="short">Short</option>
+          <option value="medium">Medium</option>
+          <option value="long">Long</option>
+          <option value="very long">Very Long</option>
+        </select>
+
+        <button class="generate-btn">⚡️ Generate</button>
+        <div class="warning" style="display: none">
+          <p>❗ Please enter a topic</p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.8.4/axios.min.js"
+      integrity="sha512-2A1+/TAny5loNGk3RBbk11FwoKXYOMfAK6R7r4CpQH7Luz4pezqEGcfphoNzB7SM4dixUoJsKkBsB6kg+dNE2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
