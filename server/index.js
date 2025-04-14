@@ -16,8 +16,6 @@ const openai = new OpenAI({
 });
 app.post("/generate", async (req, res) => {
   let { topic, platform, tone, length } = req.body;
-  console.log(topic, platform, tone, length);
-
   const prompt = `
 You're a professional content strategist.
 
@@ -32,7 +30,7 @@ Generate:
 
 1. 3 engaging and catchy titles for the content
 2. 5 to 7 relevant and trendy hashtags
-3. A captivating description that matches the platform and tone
+3. A captivating medium-long description that matches the platform and tone
 
 ⚠️ Return your response strictly in this JSON format:
 
