@@ -4,7 +4,7 @@ const cors = require("cors");
 const OpenAI = require("openai");
 require("dotenv").config();
 
-let PORT = 5500 || process.env.PORT;
+let PORT = process.env.PORT || 5000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
