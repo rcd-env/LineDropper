@@ -12,6 +12,7 @@ btn.addEventListener("click", async () => {
     return;
   } else {
     warning.style.display = "none";
+    btn.classList.add("generating");
     btn.textContent = "⏳ Generating... ⏳";
     btn.disabled = true;
     btn.style.cursor = "not-allowed";
@@ -37,6 +38,7 @@ async function getData(topic, platform, tone, length) {
   }
 }
 function generateContent(data) {
+  btn.classList.remove("generating");
   btn.textContent = "⚡️ Generate ⚡️";
   btn.disabled = false;
   btn.style.cursor = "pointer";
