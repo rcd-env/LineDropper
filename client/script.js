@@ -12,8 +12,11 @@ btn.addEventListener("click", async () => {
     return;
   } else {
     warning.style.display = "none";
+    btn.textContent = "⏳ Generating... ⏳";
+    btn.disabled = true;
+    btn.style.cursor = "not-allowed";
   }
-  console.log(topic, platform, tone, length);
+
   getData(topic, platform, tone, length);
 });
 
@@ -34,6 +37,9 @@ async function getData(topic, platform, tone, length) {
   }
 }
 function generateContent(data) {
+  btn.textContent = "⚡️ Generate ⚡️";
+  btn.disabled = false;
+  btn.style.cursor = "pointer";
   let { titles, hashtags, description } = data;
   let contentDiv = document.querySelector(".content");
   contentDiv.innerHTML = "";
